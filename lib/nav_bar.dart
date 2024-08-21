@@ -22,7 +22,7 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(boxShadow: [
+        decoration: const BoxDecoration(boxShadow: [
           BoxShadow(offset: Offset(0, -2), blurRadius: 5, color: Colors.grey)
         ]),
         child: BottomNavigationBar(
