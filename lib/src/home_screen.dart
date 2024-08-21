@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 import 'widgets/circular_containers.dart';
 import 'widgets/custom_painting.dart';
+import 'widgets/filled_circular_container.dart';
 import 'widgets/filled_rectangular_container.dart';
 import 'widgets/rectangle_containers.dart';
 
@@ -35,12 +36,13 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ]),
         child: BottomNavigationBar(items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined, color: Color(0xffFF0202),), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_outline, color: Colors.black), label: ""),
-          BottomNavigationBarItem(icon: CircleAvatar(child: Icon(Icons.shopping_cart_outlined, color: Colors.black), backgroundColor: Color(0xffFF6A6A),), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.doorbell_outlined, color: Colors.black), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined, color: Colors.black), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined, color: Color(0xffFF0202), size: 28,), label: "", ),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_outline, color: Colors.black, size: 28,), label: ""),
+          BottomNavigationBarItem(icon: CircleAvatar(backgroundColor: Color(0xffFF6A6A),child: Icon(Icons.shopping_cart_outlined, color: Colors.black, size: 28,),), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.doorbell_outlined, color: Colors.black, size: 28,), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined, color: Colors.black, size: 28,), label: ""),
         ],
+        showSelectedLabels: false,
         elevation: 50,),
       ),
       body: Stack(
@@ -50,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
               painter: RPSCustomPainter(),
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 110, left: 30),
+            padding: EdgeInsets.only(top: 130, left: 30),
             child: Icon(Icons.menu, size: 35,),
           ),
           Padding(
@@ -58,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Image.asset("assets/Food Offer.png"),
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 200, left: 50),
+            padding: EdgeInsets.only(top: 220, left: 50),
             child: Text("Delicious Food?\nGo Ahead...", style: TextStyle(fontSize: 16, color: Colors.black),),
           ),
            Padding(
@@ -94,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 510, left: 190),
+            padding: EdgeInsets.only(top: 520, left: 190),
             child: Column(
               children: [
                 Text("See More...", style: TextStyle(fontSize: 13, color: Color(0xff3275FF)),),
@@ -106,31 +108,39 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 570, left: 60),
+          Padding(
+            padding: const EdgeInsets.only(top: 570, left: 60),
             child: Row(
               children: [
-                CircularContainers(),
-                Padding(padding: EdgeInsets.only(left: 33)),
-                CircularContainers(),
-                Padding(padding: EdgeInsets.only(left: 33)),
-                CircularContainers(),
-                Padding(padding: EdgeInsets.only(left: 33)),
-                CircularContainers(),
+                isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Vegan', photoPath: 'assets/vegan.png',),
+                const Padding(padding: EdgeInsets.only(left: 33)),
+                isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Sea food', photoPath: 'assets/seaFood.png',),
+                const Padding(padding: EdgeInsets.only(left: 33)),
+               isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Fast food', photoPath: 'assets/fastfood.png',),
+                const Padding(padding: EdgeInsets.only(left: 33)),
+                isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Kebab', photoPath: 'assets/kebab.png',),
               ],
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 640, left: 60),
+           Padding(
+            padding: const EdgeInsets.only(top: 670, left: 60),
             child: Row(
               children: [
-                CircularContainers(),
-                Padding(padding: EdgeInsets.only(left: 33)),
-                CircularContainers(),
-                Padding(padding: EdgeInsets.only(left: 33)),
-                CircularContainers(),
-                Padding(padding: EdgeInsets.only(left: 33)),
-                CircularContainers(),
+                isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Salad', photoPath: 'assets/salad.png',),
+                const Padding(padding: EdgeInsets.only(left: 33)),
+                isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Dessert', photoPath: 'assets/dessert1.png',),
+                const Padding(padding: EdgeInsets.only(left: 50)),
+                isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Cake', photoPath: 'assets/cake.png',),
+                const Padding(padding: EdgeInsets.only(left: 40)),
+                isloading? Shimmer(child: const CircularContainers()):
+                const FilledCircularContainer(text: 'Coffee', photoPath: 'assets/coffee.png'),
               ],
             ),
           )

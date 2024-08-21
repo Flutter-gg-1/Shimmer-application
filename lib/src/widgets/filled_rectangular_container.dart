@@ -27,8 +27,8 @@ class FilledRectangularContainer extends StatelessWidget {
                       children: [
                         Image.asset(photoBath),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10,),
-                          child: Text(text, style: TextStyle(fontSize: 12),),
+                          padding: const EdgeInsets.only(left: 6, top: 8,),
+                          child: Text(text, style: const TextStyle(fontSize: 12),),
                         ),
                       ],
                     ),
