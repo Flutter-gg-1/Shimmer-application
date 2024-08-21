@@ -1,4 +1,5 @@
 import 'package:assignment_14/background_shape.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,6 +11,31 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: Container(
         height: 70,
         color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(LucideIcons.home),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(LucideIcons.home),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(LucideIcons.home),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(LucideIcons.heart),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(LucideIcons.user),
+            ),
+          ],
+        ),
       ),
       body: SizedBox(
         width: double.infinity,
