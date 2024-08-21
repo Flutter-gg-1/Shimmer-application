@@ -25,7 +25,7 @@ class _NavBarState extends State<NavBar> {
         currentIndex: pageIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Color(0xffFF0202),
+        selectedItemColor: const Color(0xffFF0202),
         unselectedItemColor: Colors.black,
         
         items: const [
