@@ -1,6 +1,6 @@
 {
-    "name": "assignment_14",
-    "short_name": "assignment_14",
+    "name": "shimmer_application",
+    "short_name": "shimmer_application",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

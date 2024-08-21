@@ -1,4 +1,4 @@
-package com.example.assignment_14
+package com.example.shimmer_application
 
 import io.flutter.embedding.android.FlutterActivity
 

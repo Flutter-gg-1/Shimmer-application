@@ -1,5 +1,6 @@
-import 'package:assignment_14/background_shape.dart';
+import 'package:shimmer_application/background_shape.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,15 +22,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Column(
               children: [
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 Image.asset('assets/logo.png'),
-                Row(children:[SizedBox(width: 32),Icon(Icons.menu, size: 35,)]),
-                SizedBox(height: 56,),
+                const Row(children:[const SizedBox(width: 32),Icon(Icons.menu, size: 35,)]),
+                const SizedBox(height: 56,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(width: 41),
-                    Text("Delicious Food?\nGo Ahead...", style: TextStyle(fontSize: 15)),
+                    const SizedBox(width: 41),
+                    Text("Delicious Food?\nGo Ahead...", style: GoogleFonts.outfit(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15
+                    )),
                   ],
                 )
               ],

@@ -1,4 +1,4 @@
-import 'package:assignment_14/home_screen.dart';
+import 'package:shimmer_application/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
