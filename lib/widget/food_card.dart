@@ -20,8 +20,9 @@ class _FoodCardState extends State<FoodCard> {
   @override
   void initState() {
     isLoading = true;
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 3), () {
       isLoading = false;
+      setState(() {});
     });
     super.initState();
   }

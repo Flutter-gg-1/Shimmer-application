@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_offger/widget/food_card.dart';
+import 'package:food_offger/widget/food_rounded.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text("Food offer"),
+        title: Image.asset("assest/Food Offer.pnd"),
         backgroundColor: const Color.fromARGB(0, 255, 255, 255),
       ),
       drawer: const Drawer(),
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-               const Divider(
+                const Divider(
                   color: Colors.transparent,
                   height: 59,
                 ),
@@ -79,13 +80,53 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height / 4,
-                        width: 34,
+                        height: MediaQuery.of(context).size.height / 3,
+                        width: double.infinity,
                         child: const TabBarView(
                           children: [
-                            Center(
-                              child: Text("data"),
-                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    FoodRounded(
+                                        foodName: "Vegon",
+                                        src: "assets/vegon.png"),
+                                    FoodRounded(
+                                        foodName: "See food",
+                                        src: "assets/see_food.png"),
+                                    FoodRounded(
+                                        foodName: "Fast food",
+                                        src: "assets/fast_food.png"),
+                                    FoodRounded(
+                                        foodName: "Kebab",
+                                        src: "assets/kebab.png"),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    FoodRounded(
+                                        foodName: "Salad",
+                                        src: "assets/salad.png"),
+                                    FoodRounded(
+                                        foodName: "Dessert",
+                                        src: "assets/dessert.png"),
+                                    FoodRounded(
+                                        foodName: "Cake",
+                                        src: "assets/cake.png"),
+                                    FoodRounded(
+                                        foodName: "Coffee",
+                                        src: "assets/coffee.png"),
+                                  ],
+                                )
+                              ],
+                            )
                           ],
                         ),
                       ),
@@ -104,19 +145,21 @@ class _HomeScreenState extends State<HomeScreen> {
             IconButton(
                 onPressed: () {}, icon: const Icon(FontAwesomeIcons.house)),
             IconButton(
-                onPressed: () {},
-                icon: const Icon(FontAwesomeIcons.heartCircleBolt)),
+                onPressed: () {}, icon: const Icon(FontAwesomeIcons.heart)),
             IconButton(
                 onPressed: () {},
                 icon: const Icon(FontAwesomeIcons.cartShopping)),
             IconButton(
                 onPressed: () {}, icon: const Icon(FontAwesomeIcons.bell)),
+            IconButton(
+                onPressed: () {}, icon: const Icon(FontAwesomeIcons.user)),
           ],
         ),
       ),
     );
   }
 }
+
 //
 
 class RPSCustomPainter extends CustomPainter {
