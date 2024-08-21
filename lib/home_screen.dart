@@ -1,6 +1,6 @@
-import 'package:assignment_14/background_shape.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:flutter/material.dart';
+import 'all_file.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -43,7 +43,13 @@ class HomeScreen extends StatelessWidget {
         child: Stack(
           children: [
             const SizedBox(height: 70),
-            const Positioned(top: 70, left: 150, child: Text('Home Screen')),
+            Positioned(
+                top: 70,
+                left: 150,
+                child: CustomPaint(
+                  size: const Size(113, 30),
+                  painter: RPSCustomPainter(),
+                )),
             Positioned(
               left: 0,
               top: 0,
