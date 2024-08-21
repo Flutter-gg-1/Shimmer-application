@@ -29,10 +29,9 @@ A simple flutter project showing the UI implementation of a food offers app wher
 <img src="./assets/images/screenshots/3.png" width="364" height="800">
 
  
-- Gif
+- GIF
 
-<img src="./assets/images/screenshots/FoodOffer.gif" width="364" height="800">
-
+![GIF](./assets/images/screenshots/FoodOffer.gif)
 
 
 ## Help
