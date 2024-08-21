@@ -15,7 +15,7 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
   @override
   void initState() {
     super.initState();
-    // Set a timer to stop the shimmer effect after 2 seconds
+   
     Timer(Duration(seconds: 3), () {
       setState(() {
         _isLoading = false;
@@ -28,51 +28,51 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image on the left side
+        
           Positioned.fill(
             child: Align(
               alignment: Alignment.centerLeft,
               child: Image.asset(
-                'assets/images/Vector.png', // Your background image path
+                'assets/images/Vector.png', 
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width *
-                    0.4, // Adjust the width as needed
+                    0.4, 
               ),
             ),
           ),
-          // Main Content
+        
           SafeArea(
             child: Column(
               children: [
-                // Header
+              
                 Container(
                   padding: EdgeInsets.all(16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Adjust the vertical position of the menu icon
+                    
                       Transform.translate(
                         offset: Offset(
-                            0, 18), // Adjust this value to move the icon down
+                            0, 18),
                         child: Icon(
                           Icons.menu,
                           color: Colors.black,
                           size: 32,
                         ),
                       ),
-                      // Logo image
+                   
                       Image.asset(
-                        'assets/images/logo.jpeg', // Path to your logo image
-                        height: 40.0, // Adjust the height as needed
+                        'assets/images/logo.jpeg', 
+                        height: 40.0, 
                       ),
-                      // An empty SizedBox to keep the space
-                      SizedBox(), // Adjust the width as needed for balance
+                   
+                      SizedBox(),  for balance
                     ],
                   ),
                 ),
 
                 SizedBox(height: 16.0),
-                // "Delicious Food? Go Ahead..." Text
+             
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   child: Align(
@@ -88,7 +88,7 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
                   ),
                 ),
                 SizedBox(height: 16.0),
-                // Horizontal List of Food Cards
+              
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -104,10 +104,10 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
                   ),
                 ),
                 SizedBox(height: 16.0),
-                // "See More..." and Categories
+              
                 Stack(
                   children: [
-                    // Underline
+                  
                     Positioned(
                       bottom: -4,
                       left: 0,
@@ -118,7 +118,7 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
                         margin: EdgeInsets.only(bottom: 4.0),
                       ),
                     ),
-                    // Text
+                   
                     Text(
                       'See More...',
                       style: TextStyle(
@@ -169,45 +169,45 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
           ),
         ],
       ),
-      // Bottom Navigation Bar
+     
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/vectors/vector_14_x2.svg', // Path to your SVG icon
+              'assets/vectors/vector_14_x2.svg', 
               color: Colors.red,
-              height: 35.0, // Adjust the height as needed
+              height: 35.0, 
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/vectors/iconsax_linearlike_x2.svg', // Path to your SVG icon
+              'assets/vectors/iconsax_linearlike_x2.svg', 
               color: Colors.black,
-              height: 35.0, // Adjust the height as needed
+              height: 35.0, 
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/vectors/group_51_x2.svg',
-              height: 35.0, // Adjust the height as needed
+              height: 35.0, 
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/vectors/iconsax_linearnotification_x2.svg', // Path to your SVG icon
+              'assets/vectors/iconsax_linearnotification_x2.svg', 
               color: Colors.black,
-              height: 35.0, // Adjust the height as needed
+              height: 35.0,
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/vectors/iconsax_linearprofilecircle_x2.svg', // Path to your SVG icon
+              'assets/vectors/iconsax_linearprofilecircle_x2.svg', 
               color: Colors.black,
-              height: 35.0, // Adjust the height as needed
+              height: 35.0, 
             ),
             label: '',
           ),
@@ -216,7 +216,7 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
     );
   }
 
-  // Helper method to build food cards
+ 
   Widget _buildFoodCard(
     String title,
     String imagePath,
@@ -250,7 +250,7 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
             ),
             child: Stack(
               children: [
-                // Title at the top left
+               
                 Positioned(
                   top: 15.0,
                   left: 8.0,
@@ -263,7 +263,7 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
                     ),
                   ),
                 ),
-                // Image aligned to the right, partially hidden
+               
                 Positioned(
                   right: right,
                   top: top,
@@ -280,7 +280,7 @@ class _FoodOfferPageState extends State<FoodOfferPage> {
           );
   }
 
-  // Helper method to build category icons
+
   Widget _buildCategoryIcon(String title, String imagePath) {
     return _isLoading
         ? Shimmer.fromColors(
