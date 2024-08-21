@@ -9,8 +9,8 @@ class EmptyRectangle extends StatelessWidget {
       height: 138,
       width: 77,
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [const Color(0xffE8E8E8), const Color(0xff828282)],
+          gradient: const LinearGradient(
+              colors: [ Color(0xffE8E8E8), Color(0xff828282)],
               begin: Alignment.topLeft),
           borderRadius: BorderRadius.circular(7),
           boxShadow: const [

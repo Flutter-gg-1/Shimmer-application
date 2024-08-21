@@ -21,26 +21,39 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: pageIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        selectedItemColor: const Color(0xffFF0202),
-        unselectedItemColor: Colors.black,
-        
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: ""),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notifications_none), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: ""),
-        ],
-        onTap: (int index) {
-          pageIndex = index;
-          setState(() {});
-        },
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(boxShadow: [
+          BoxShadow(offset: Offset(0, -2), blurRadius: 5, color: Colors.grey)
+        ]),
+        child: BottomNavigationBar(
+          currentIndex: pageIndex,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          selectedItemColor: const Color(0xffFF0202),
+          unselectedItemColor: Colors.black,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite_border_sharp), label: ""),
+            BottomNavigationBarItem(
+                icon: CircleAvatar(
+                  backgroundColor: Color(0xffFF6A6A),
+                  child: Icon(
+                    Icons.shopping_cart_outlined,
+                    color: Colors.black,
+                  ),
+                ),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.notifications_none), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle_outlined), label: ""),
+          ],
+          onTap: (int index) {
+            pageIndex = index;
+            setState(() {});
+          },
+        ),
       ),
       body: pages[pageIndex],
     );
