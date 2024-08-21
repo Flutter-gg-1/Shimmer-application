@@ -1,7 +1,9 @@
-# Shimmer application
+## Assignment 14
 
-**Complete and submit the Shimmer, and Flutter shape maker Lab of the given design**
+#### 1. Overview 📖
 
-**Note: Don't forget to include the Screenshots of your implementation**
+#### 2. Widgets Used 🎨
 
-**Deadline: at 10:00 am, 22 Aug 2024**
+#### 3. Results ⭐
+
+#### 4. Conclusion 🏁
