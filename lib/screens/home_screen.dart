@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shimmer_app/food_offer.dart';
+import 'package:shimmer_app/screens/food_offer.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:shimmer_app/screens/welcome_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,11 +12,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Widget> pages = [
+    const WelcomeScreen(),
     const FoodOffer(),
-    const FoodOffer(),
-    const FoodOffer(),
-    const FoodOffer(),
-    const FoodOffer(),
+    const WelcomeScreen(),
+    const WelcomeScreen(),
+    const WelcomeScreen(),
   ];
   int pageIndex = 0;
 
@@ -34,19 +35,28 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: NavigationBar(
           selectedIndex: pageIndex,
-          destinations: const [
-            NavigationDestination(
-                icon: Icon(AntDesign.home_outline), label: ''),
-            NavigationDestination(
-                icon: Icon(AntDesign.heart_outline), label: ''),
-            NavigationDestination(
+          destinations: [
+            const NavigationDestination(
                 icon: Icon(
-                  AntDesign.shopping_cart_outline,
+                  AntDesign.home_outline,
+                  color: Color.fromRGBO(255, 2, 2, 1),
                 ),
                 label: ''),
+            const NavigationDestination(
+                icon: Icon(AntDesign.heart_outline), label: ''),
             NavigationDestination(
+                icon: Container(
+                  decoration: const BoxDecoration(
+                      color: Color.fromRGBO(255, 106, 106, 1),
+                      shape: BoxShape.circle),
+                  child: const Icon(
+                    AntDesign.shopping_cart_outline,
+                  ),
+                ),
+                label: ''),
+            const NavigationDestination(
                 icon: Icon(AntDesign.bell_outline), label: ''),
-            NavigationDestination(
+            const NavigationDestination(
                 icon: Icon(
                   AntDesign.user_outline,
                 ),

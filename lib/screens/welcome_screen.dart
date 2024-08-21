@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shimmer_app/widgets/food_card.dart';
-import './utils/colored_side.dart';
+import '../utils/colored_side.dart';
 
-class FoodOffer extends StatefulWidget {
-  const FoodOffer({super.key});
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
 
-  @override
-  State<FoodOffer> createState() => _FoodOfferState();
-}
-
-class _FoodOfferState extends State<FoodOffer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,22 +33,11 @@ class _FoodOfferState extends State<FoodOffer> {
               left: 40,
               child: Column(
                 children: [
-                  Text('Delicious Food? '),
-                  Text('Go Ahead...'),
-                ],
-              ),
-            ),
-            Positioned(
-              top: 239,
-              left: 43,
-              child: Row(
-                children: [
-                  FoodCard(),
-                  SizedBox(width:22 ,),
-                  FoodCard(),
-                  SizedBox(width:22 ,),
-                  FoodCard(),
-                  
+                  Text('Delicious Food? ', style: TextStyle(fontSize: 15)),
+                  Text(
+                    'Go Ahead...',
+                    style: TextStyle(fontSize: 15),
+                  ),
                 ],
               ),
             ),

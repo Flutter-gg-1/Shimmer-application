@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 
 class FoodCard extends StatefulWidget {
-  const FoodCard({super.key});
+  final String imagePath;
+  const FoodCard({super.key, required this.imagePath});
 
   @override
   State<FoodCard> createState() => _FoodCardState();
@@ -15,7 +16,7 @@ class _FoodCardState extends State<FoodCard> {
   void initState() {
     isLoading = true;
     super.initState();
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 5), () {
       setState(() {
         isLoading = false;
       });
@@ -24,8 +25,8 @@ class _FoodCardState extends State<FoodCard> {
   @override
   Widget build(BuildContext context) {
     return isLoading ? Shimmer(
-      duration: Duration(seconds: 1),
-      direction: ShimmerDirection.fromLeftToRight(),
+      duration: const Duration(seconds: 1),
+      direction: const ShimmerDirection.fromLeftToRight(),
       child: Container(
         height: 138,
         width: 77,
@@ -57,7 +58,7 @@ class _FoodCardState extends State<FoodCard> {
                 color: Color.fromRGBO(0, 0, 0, 0.25))
           ],
         ),
-        child: Image.asset('assets/images/burger.png'),
+        child: Image.asset(widget.imagePath),
       )
     ;
   }
