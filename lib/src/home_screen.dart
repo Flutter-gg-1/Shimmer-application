@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Image.asset("assest/Food Offer.pnd"),
+        title: Image.asset("assets/Food Offer.jpg"),
         backgroundColor: const Color.fromARGB(0, 255, 255, 255),
       ),
       drawer: const Drawer(),

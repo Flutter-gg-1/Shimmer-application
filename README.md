@@ -1,7 +1,7 @@
-# Shimmer application
+# Food Offer
+this an interface for food offering app that apply shimmer for loadin data
 
-**Complete and submit the Shimmer, and Flutter shape maker Lab of the given design**
 
-**Note: Don't forget to include the Screenshots of your implementation**
+# sample 
 
-**Deadline: at 10:00 am, 22 Aug 2024**
+![offering app](sample/Food%20Offer.gif)
