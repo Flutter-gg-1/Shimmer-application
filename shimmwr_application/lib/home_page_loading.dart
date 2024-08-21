@@ -14,7 +14,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
   @override
   void initState() {
     isLoading = true;
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       isLoading = false;
       setState(() {});
     });
@@ -27,7 +27,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
         body: Stack(fit: StackFit.expand, children: [
 //Add this CustomPaint widget to the Widget Tree
       CustomPaint(
-        size: Size(144, 800),
+        size: const Size(144, 800),
         painter: RPSCustomPainter(),
       ),
       Positioned(
@@ -61,8 +61,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
           left: 60,
           child: isLoading
               ? Shimmer(
-                  duration: Duration(seconds: 7),
-                  color: Color.fromARGB(255, 248, 244, 210),
+                  duration: const Duration(seconds: 7),
+                  color: const Color.fromARGB(255, 248, 244, 210),
                   child: Container(
                     height: 138,
                     width: 77,
@@ -77,7 +77,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                       BoxDecoration(borderRadius: BorderRadius.circular(15)),
                   child: Stack(children: [
                     Image.asset("assets/burger2.png"),
-                    Positioned(
+                    const Positioned(
                         top: 9,
                         left: 7,
                         child: Text(
@@ -91,8 +91,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
           left: 193,
           child: isLoading
               ? Shimmer(
-                  duration: Duration(seconds: 7),
-                  color: Color.fromARGB(255, 248, 244, 210),
+                  duration: const Duration(seconds: 7),
+                  color: const Color.fromARGB(255, 248, 244, 210),
                   child: Container(
                     height: 138,
                     width: 77,
@@ -108,7 +108,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                       borderRadius: BorderRadius.circular(15)),
                   child: Stack(children: [
                     Image.asset("assets/pizza.png"),
-                    Positioned(
+                    const Positioned(
                         top: 9,
                         left: 7,
                         child: Text(
@@ -122,7 +122,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
           left: 330,
           child: isLoading
               ? Shimmer(
-                  duration: Duration(seconds: 7),
+                  duration: const Duration(seconds: 7),
                   color: Color.fromARGB(255, 248, 244, 210),
                   child: Container(
                     height: 138,
@@ -135,11 +135,11 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                   height: 138,
                   width: 77,
                   decoration: BoxDecoration(
-                      color: Color(0xffFFFCB0),
+                      color: const Color(0xffFFFCB0),
                       borderRadius: BorderRadius.circular(15)),
                   child: Stack(children: [
                     Image.asset("assets/pasta2.png"),
-                    Positioned(
+                    const Positioned(
                         top: 9,
                         left: 7,
                         child: Text(
@@ -153,13 +153,13 @@ class _HomePageLoadingState extends State<HomePageLoading> {
           left: 190,
           child: Container(
             width: 100,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 border: Border(
                     bottom: BorderSide(
               color: Color(0xff3275FF), // Color for top border
               // width: 0.5,
             ))),
-            child: Text(
+            child: const Text(
               "    See More...",
               style: TextStyle(color: Color(0xff3275FF)),
             ),
@@ -172,8 +172,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
             children: [
               isLoading
                   ? Shimmer(
-                      duration: Duration(seconds: 7),
-                      color: Color.fromARGB(255, 248, 244, 210),
+                      duration: const Duration(seconds: 7),
+                      color: const Color.fromARGB(255, 248, 244, 210),
                       child: Container(
                         height: 48,
                         width: 48,
@@ -195,14 +195,14 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                             "assets/Ellipse 2.png",
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Vegan",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Positioned(
@@ -213,8 +213,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                     children: [
                       isLoading
                           ? Shimmer(
-                              duration: Duration(seconds: 7),
-                              color: Color.fromARGB(255, 248, 244, 210),
+                              duration: const Duration(seconds: 7),
+                              color: const Color.fromARGB(255, 248, 244, 210),
                               child: Container(
                                 height: 48,
                                 width: 48,
@@ -236,7 +236,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                                     "assets/Ellipse 2-1.png",
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Sea food",
                                   style: TextStyle(
                                       fontSize: 16,
@@ -246,7 +246,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                             ),
                     ],
                   )),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Positioned(
@@ -257,8 +257,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                     children: [
                       isLoading
                           ? Shimmer(
-                              duration: Duration(seconds: 7),
-                              color: Color.fromARGB(255, 248, 244, 210),
+                              duration: const Duration(seconds: 7),
+                              color: const Color.fromARGB(255, 248, 244, 210),
                               child: Container(
                                 height: 48,
                                 width: 48,
@@ -280,7 +280,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                                     "assets/Ellipse 2-2.png",
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Fast food",
                                   style: TextStyle(
                                       fontSize: 16,
@@ -290,7 +290,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                             ),
                     ],
                   )),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Positioned(
@@ -301,8 +301,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                     children: [
                       isLoading
                           ? Shimmer(
-                              duration: Duration(seconds: 7),
-                              color: Color.fromARGB(255, 248, 244, 210),
+                              duration: const Duration(seconds: 7),
+                              color: const Color.fromARGB(255, 248, 244, 210),
                               child: Container(
                                 height: 48,
                                 width: 48,
@@ -324,7 +324,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                                     "assets/Ellipse 2-3.png",
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Fast food",
                                   style: TextStyle(
                                       fontSize: 16,
@@ -334,7 +334,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                             ),
                     ],
                   )),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
             ],
@@ -347,8 +347,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
             children: [
               isLoading
                   ? Shimmer(
-                      duration: Duration(seconds: 7),
-                      color: Color.fromARGB(255, 248, 244, 210),
+                      duration: const Duration(seconds: 7),
+                      color: const Color.fromARGB(255, 248, 244, 210),
                       child: Container(
                         height: 48,
                         width: 48,
@@ -370,14 +370,14 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                             "assets/Ellipse 2-4.png",
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Salad",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Positioned(
@@ -388,8 +388,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                     children: [
                       isLoading
                           ? Shimmer(
-                              duration: Duration(seconds: 7),
-                              color: Color.fromARGB(255, 248, 244, 210),
+                              duration: const Duration(seconds: 7),
+                              color: const Color.fromARGB(255, 248, 244, 210),
                               child: Container(
                                 height: 48,
                                 width: 48,
@@ -411,7 +411,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                                     "assets/Ellipse 2-5.png",
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Dessert",
                                   style: TextStyle(
                                       fontSize: 16,
@@ -421,7 +421,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                             ),
                     ],
                   )),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Positioned(
@@ -432,8 +432,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                     children: [
                       isLoading
                           ? Shimmer(
-                              duration: Duration(seconds: 7),
-                              color: Color.fromARGB(255, 248, 244, 210),
+                              duration: const Duration(seconds: 7),
+                              color: const Color.fromARGB(255, 248, 244, 210),
                               child: Container(
                                 height: 48,
                                 width: 48,
@@ -455,7 +455,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                                     "assets/Ellipse 2-6.png",
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Cake",
                                   style: TextStyle(
                                       fontSize: 16,
@@ -465,7 +465,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                             ),
                     ],
                   )),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Positioned(
@@ -476,8 +476,8 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                     children: [
                       isLoading
                           ? Shimmer(
-                              duration: Duration(seconds: 7),
-                              color: Color.fromARGB(255, 248, 244, 210),
+                              duration: const Duration(seconds: 7),
+                              color: const Color.fromARGB(255, 248, 244, 210),
                               child: Container(
                                 height: 48,
                                 width: 48,
@@ -499,7 +499,7 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                                     "assets/Ellipse 2-7.png",
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   "Coffe",
                                   style: TextStyle(
                                       fontSize: 16,
