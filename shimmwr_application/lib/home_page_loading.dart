@@ -522,13 +522,13 @@ class _HomePageLoadingState extends State<HomePageLoading> {
                     color: Colors.grey.withOpacity(0.5), // Color of the shadow
                     spreadRadius: 1, // How much the shadow spreads
                     blurRadius: 5, // Softness of the shadow
-                    offset: Offset(0,
+                    offset: const Offset(0,
                         -3), // Offset to position the shadow only at the top (negative y value)
                   ),
                 ],
                 color: Colors.white,
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Icon(
