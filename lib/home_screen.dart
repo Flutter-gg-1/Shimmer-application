@@ -1,3 +1,4 @@
+import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:shimmer_application/background_shape.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 5),(){
+      setState(() {
+        isLoading = false;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,21 +53,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 57),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: List.generate(3, (index){
-                    return SizedBox(
-                      width: 77,
-                      height: 138,
-                      child: MainFood(
-                        imgPath: mainFoodData[index]['imgPath'],
-                        foodName: mainFoodData[index]['foodName'],
-                        color: mainFoodData[index]['color'],
-                        imgHeight: mainFoodData[index]['imgHeight'],
-                        imgWidth: mainFoodData[index]['imgWidth'],
-                        imgTop: mainFoodData[index]['imgTop'],
-                        imgLeft: mainFoodData[index]['imgLeft'],
-                        imgRight: mainFoodData[index]['imgRight'],
-                        imgBottom: mainFoodData[index]['imgBottom']
-                      )
+                  children:
+                  isLoading ? List.generate(3, (index){
+                    return Shimmer(
+                      duration: const Duration(seconds: 1),
+                      color: const Color(0xffe8e8e8),
+                      child: const MainFood(
+                        foodName: "",
+                        imgPath: "",
+                        color: Color(0xff828282),
+                      ),
+                    );
+                  })
+
+                  : List.generate(3, (index){
+                    return MainFood(
+                      imgPath: mainFoodData[index]['imgPath'],
+                      foodName: mainFoodData[index]['foodName'],
+                      color: mainFoodData[index]['color'],
+                      imgHeight: mainFoodData[index]['imgHeight'],
+                      imgWidth: mainFoodData[index]['imgWidth'],
+                      imgTop: mainFoodData[index]['imgTop'],
+                      imgLeft: mainFoodData[index]['imgLeft'],
+                      imgRight: mainFoodData[index]['imgRight'],
+                      imgBottom: mainFoodData[index]['imgBottom']
                     );
                   }),
                 ),
@@ -66,9 +89,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),),
                 ),
                 const SizedBox(height: 16),
-                MoreFood(moreFoodList: moreFoodData.sublist(0,4), imgSize: 60),
+                isLoading ? Shimmer(
+                  duration: const Duration(seconds: 1),
+                  color: const Color(0xffe8e8e8),
+                  child: const MoreFood(moreFoodList: []),
+                )
+                : MoreFood(moreFoodList: moreFoodData.sublist(0,4), imgSize: 60),
                 const SizedBox(height: 11,),
-                MoreFood(moreFoodList: moreFoodData.sublist(4), imgSize: 48)
+                isLoading ? Shimmer(
+                  duration: const Duration(seconds: 1),
+                  color: const Color(0xffe8e8e8),
+                  child: const MoreFood(moreFoodList: []),
+                )
+                : MoreFood(moreFoodList: moreFoodData.sublist(4), imgSize: 48)
               ],
             )
           ]

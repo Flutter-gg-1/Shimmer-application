@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MoreFood extends StatelessWidget {
   final List<Map<String, dynamic>> moreFoodList;
-  final double imgSize;
-  const MoreFood({super.key, required this.imgSize, required this.moreFoodList});
+  final double? imgSize;
+  const MoreFood({super.key, this.imgSize, required this.moreFoodList});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,20 @@ class MoreFood extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 35),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(moreFoodList.length, (index) {
+        children: moreFoodList.isEmpty ? List.generate(4, (index){
+          return Container(
+            alignment: Alignment.center,
+            width: 60,
+            height: 60,
+            clipBehavior: Clip.hardEdge,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Color(0xff828282),
+              boxShadow: [BoxShadow(color: Colors.black54,offset: Offset(0, 2),blurRadius: 5)]
+            )
+          );
+        })
+        : List.generate(4, (index) {
           return Column(
             children: [
               Container(
