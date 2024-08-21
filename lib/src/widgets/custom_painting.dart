@@ -1,31 +1,33 @@
-import 'dart:ui';
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 
+
+//Copy this CustomPainter code to the Bottom of the File
 class RPSCustomPainter extends CustomPainter {
     @override
     void paint(Canvas canvas, Size size) {
             
 Path path_0 = Path();
-    path_0.moveTo(61.6642,0);
-    path_0.lineTo(77.0802,33.3333);
-    path_0.cubicTo(92.4963,66.6667,123.328,133.333,136.175,200);
-    path_0.cubicTo(149.022,266.667,143.883,333.333,136.175,400);
-    path_0.cubicTo(128.467,466.667,118.19,533.333,115.62,600);
-    path_0.cubicTo(113.051,666.667,118.19,733.333,120.759,766.667);
-    path_0.lineTo(123.328,800);
-    path_0.lineTo(0,800);
-    path_0.lineTo(0,766.667);
-    path_0.cubicTo(0,733.333,0,666.667,0,600);
-    path_0.cubicTo(0,533.333,0,466.667,0,400);
-    path_0.cubicTo(0,333.333,0,266.667,0,200);
-    path_0.cubicTo(0,133.333,0,66.6667,0,33.3333);
+    path_0.moveTo(size.width*0.4282236,0);
+    path_0.lineTo(size.width*0.5352792,size.height*0.04166662);
+    path_0.cubicTo(size.width*0.6423354,size.height*0.08333338,size.width*0.8564444,size.height*0.1666662,size.width*0.9456597,size.height*0.2500000);
+    path_0.cubicTo(size.width*1.034875,size.height*0.3333337,size.width*0.9991875,size.height*0.4166663,size.width*0.9456597,size.height*0.5000000);
+    path_0.cubicTo(size.width*0.8921319,size.height*0.5833337,size.width*0.8207639,size.height*0.6666663,size.width*0.8029167,size.height*0.7500000);
+    path_0.cubicTo(size.width*0.7850764,size.height*0.8333337,size.width*0.8207639,size.height*0.9166663,size.width*0.8386042,size.height*0.9583337);
+    path_0.lineTo(size.width*0.8564444,size.height);
+    path_0.lineTo(0,size.height);
+    path_0.lineTo(0,size.height*0.9583337);
+    path_0.cubicTo(0,size.height*0.9166663,0,size.height*0.8333337,0,size.height*0.7500000);
+    path_0.cubicTo(0,size.height*0.6666663,0,size.height*0.5833337,0,size.height*0.5000000);
+    path_0.cubicTo(0,size.height*0.4166663,0,size.height*0.3333337,0,size.height*0.2500000);
+    path_0.cubicTo(0,size.height*0.1666662,0,size.height*0.08333338,0,size.height*0.04166662);
     path_0.lineTo(0,0);
-    path_0.lineTo(61.6642,0);
+    path_0.lineTo(size.width*0.4282236,0);
     path_0.close();
 
 Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.color = const Color(0xffFFCECE).withOpacity(1.0);
+paint_0_fill.color = Color(0xffFFCECE).withOpacity(1.0);
 canvas.drawPath(path_0,paint_0_fill);
 
 }
