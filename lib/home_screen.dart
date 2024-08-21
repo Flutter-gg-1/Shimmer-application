@@ -1,8 +1,13 @@
-import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:shimmer_application/background_shape.dart';
+// packages
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shimmer_animation/shimmer_animation.dart';
+
+// data
 import 'package:shimmer_application/food_data.dart';
+
+// widgets
+import 'package:shimmer_application/background_shape.dart';
 import 'package:shimmer_application/widgets/main_food.dart';
 import 'package:shimmer_application/widgets/more_food.dart';
 
