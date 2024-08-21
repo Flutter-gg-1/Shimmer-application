@@ -11,11 +11,9 @@ class WelcomeScreen extends StatelessWidget {
         child: Stack(
           clipBehavior: Clip.none,
           children: [
-            Container(
-              child: CustomPaint(
-                size: const Size(144, 800),
-                painter: ColoredSide(),
-              ),
+            CustomPaint(
+              size: const Size(144, 800),
+              painter: ColoredSide(),
             ),
             const Positioned(
                 top: 60,
@@ -41,6 +39,15 @@ class WelcomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Center(
+              child: Text(
+                'Welcom',
+                style: TextStyle(
+                    fontSize: 36,
+                    color: Colors.teal,
+                    backgroundColor: Colors.amber[50]),
+              ),
+            )
           ],
         ),
       ),

@@ -46,11 +46,9 @@ class _FoodOfferState extends State<FoodOffer> {
         child: Stack(
           clipBehavior: Clip.none,
           children: [
-            Container(
-              child: CustomPaint(
-                size: const Size(144, 800),
-                painter: ColoredSide(),
-              ),
+            CustomPaint(
+              size: const Size(144, 800),
+              painter: ColoredSide(),
             ),
             const Positioned(
                 top: 60,

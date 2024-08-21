@@ -62,7 +62,7 @@ class _FoodCircleState extends State<FoodCircle> {
             height: 57,
             width: 60,
             fit: BoxFit.cover,),
-            Text(widget.foodName, style: TextStyle(fontSize: 9, fontWeight: FontWeight.w500),)
+            Text(widget.foodName, style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w500),)
           ],
         ),
       )

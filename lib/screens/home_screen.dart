@@ -13,8 +13,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<Widget> pages = [
     const WelcomeScreen(),
-    const FoodOffer(),
     const WelcomeScreen(),
+    const FoodOffer(),
     const WelcomeScreen(),
     const WelcomeScreen(),
   ];
