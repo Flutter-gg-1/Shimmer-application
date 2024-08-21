@@ -1,7 +1,3 @@
-# Shimmer application
+# shimmer_app
 
-**Complete and submit the Shimmer, and Flutter shape maker Lab of the given design**
-
-**Note: Don't forget to include the Screenshots of your implementation**
-
-**Deadline: at 10:00 am, 22 Aug 2024**
+A new Flutter project.
