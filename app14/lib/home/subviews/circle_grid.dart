@@ -39,7 +39,7 @@ class CircleGrid extends StatelessWidget {
 }
 
 class _ShimmerView extends StatelessWidget {
-  const _ShimmerView({super.key});
+  const _ShimmerView();
 
   @override
   Widget build(BuildContext context) {
