@@ -1,3 +1,3 @@
-# food_offer
+# Shimmer application
 
-A new Flutter project.
+![Screenshot](../food_order.gif)
