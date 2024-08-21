@@ -20,15 +20,15 @@ class HomeScreen extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(LucideIcons.home),
+              icon: const Icon(LucideIcons.fan),
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(LucideIcons.home),
+              icon: const Icon(LucideIcons.shoppingCart, color: Colors.red),
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(LucideIcons.heart),
+              icon: const Icon(LucideIcons.bell),
             ),
             IconButton(
               onPressed: () {},
