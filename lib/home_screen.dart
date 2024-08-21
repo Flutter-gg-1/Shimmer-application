@@ -74,6 +74,33 @@ class _HomeScreenState extends State<HomeScreen> {
           ]
         ),
       ),
+      bottomNavigationBar: NavigationBar(
+        elevation: 10,
+        shadowColor: Colors.black54,
+        destinations: [
+          IconButton(onPressed: (){}, icon: const Icon(Icons.home_outlined, color: Color(0xffFF0202),size: 30)),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.favorite_border_outlined, color: Colors.black,size: 30)),
+          IconButton(
+            onPressed: (){},
+            icon: Container(
+              padding: const EdgeInsets.all(10),
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black45,
+                    offset: Offset(0, 2),
+                    blurRadius: 5
+                  )
+                ],
+                shape: BoxShape.circle,color: Color(0xffFF6A6A)
+              ),
+              child: const Icon(Icons.shopping_cart_outlined, color: Colors.black,size: 30)
+            )
+          ),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.notifications_none_outlined, color: Colors.black,size: 30)),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.account_circle_outlined, color: Colors.black,size:30))
+        ],
+      ),
     );
   }
 }
