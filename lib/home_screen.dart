@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer_application/food_data.dart';
 import 'package:shimmer_application/widgets/main_food.dart';
+import 'package:shimmer_application/widgets/more_food.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -55,7 +56,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       )
                     );
                   }),
-                )
+                ),
+                const SizedBox(height: 57),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 4),
+                  decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Color(0xff3275FF)))),
+                  child: Text('See More...', style: GoogleFonts.outfit(
+                    color: const Color(0xff3275FF)
+                  ),),
+                ),
+                const SizedBox(height: 16),
+                MoreFood(moreFoodList: moreFoodData.sublist(0,4), imgSize: 60),
+                const SizedBox(height: 11,),
+                MoreFood(moreFoodList: moreFoodData.sublist(4), imgSize: 48)
               ],
             )
           ]
