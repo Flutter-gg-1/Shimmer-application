@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 3), () {
       setState(() {
         isLoading = false;
       });
@@ -127,7 +127,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: 77,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
-                                    color: Colors.yellow,
+                                    color:
+                                        const Color.fromARGB(255, 69, 68, 61),
                                   ),
                                 ),
                                 const SizedBox(width: 30),
@@ -136,7 +137,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: 77,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
-                                    color: Colors.yellow,
+                                    color:
+                                        const Color.fromARGB(255, 49, 49, 46),
                                   ),
                                 ),
                                 const SizedBox(width: 30),
@@ -145,7 +147,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: 77,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
-                                    color: Colors.yellow,
+                                    color:
+                                        const Color.fromARGB(255, 79, 78, 68),
                                   ),
                                 ),
                               ],
@@ -153,37 +156,85 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                   ),
                   const SizedBox(height: 50),
-                  Shimmer(
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                      ],
-                    ),
-                  ),
+                  isLoading
+                      ? Shimmer(
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                            ],
+                          ),
+                        )
+                      : Shimmer(
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 56, 55, 52)),
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 58, 58, 55)),
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 124, 123, 115)),
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 130, 129, 119)),
+                            ],
+                          ),
+                        ),
                   const SizedBox(height: 50),
-                  Shimmer(
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                        CircleAvatar(
-                            radius: 45, backgroundColor: Colors.yellow),
-                      ],
-                    ),
-                  ),
+                  isLoading
+                      ? Shimmer(
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                              CircleAvatar(
+                                  radius: 45, backgroundColor: Colors.yellow),
+                            ],
+                          ),
+                        )
+                      : Shimmer(
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 30, 30, 29)),
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 53, 53, 51)),
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 52, 51, 48)),
+                              CircleAvatar(
+                                  radius: 45,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 63, 62, 60)),
+                            ],
+                          ),
+                        ),
                 ],
               ),
             ),
