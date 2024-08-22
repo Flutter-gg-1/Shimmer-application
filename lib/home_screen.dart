@@ -42,7 +42,6 @@ class HomeScreen extends StatelessWidget {
         height: double.infinity,
         child: Stack(
           children: [
-            const SizedBox(height: 70),
             Positioned(
                 top: 70,
                 left: 150,
@@ -54,6 +53,14 @@ class HomeScreen extends StatelessWidget {
               size: const Size(144, 800),
               painter: BackgroundShape(),
             ),
+            Positioned(
+                top: 110,
+                left: 30,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(LucideIcons.menu),
+                  iconSize: 35,
+                )),
             Padding(
               padding: const EdgeInsets.only(top: 200),
               child: Column(
