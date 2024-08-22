@@ -13,7 +13,7 @@ class _SihmmerScreenState extends State<SihmmerScreen> {
 
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 5), () {
       isLodaing = false;
       setState(() {});
     });
@@ -103,61 +103,184 @@ class _SihmmerScreenState extends State<SihmmerScreen> {
                             width: 110,
                             height: 200,
                             decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: const Color(0xff000000)
-                                        .withOpacity(0.25),
-                                    spreadRadius: 0.3,
-                                    blurRadius: 6,
-                                    offset: const Offset(
-                                        0, 3), // changes position of shadow
-                                  ),
-                                ],
-                                color: const Color(0xffD5E2FD),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(15))),
+                              boxShadow: [
+                                BoxShadow(
+                                  color:
+                                      const Color(0xff000000).withOpacity(0.25),
+                                  spreadRadius: 0.3,
+                                  blurRadius: 6,
+                                  offset: const Offset(
+                                      0, 3), // changes position of shadow
+                                ),
+                              ],
+                              color: const Color(0xffD5E2FD),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(15)),
+                            ),
+                            child: Column(
+                              children: [
+                                const Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 10, top: 15),
+                                      child: Text('Burger'),
+                                    )),
+                                Row(
+                                  children: [
+                                    const SizedBox(
+                                      width: 33,
+                                    ),
+                                    Image.asset(
+                                      "assets/Rectangle_22-removebg-preview.png",
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
-                    Container(
-                      margin: const EdgeInsets.only(right: 22),
-                      width: 110,
-                      height: 200,
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xff000000).withOpacity(0.25),
-                              spreadRadius: 0.3,
-                              blurRadius: 6,
-                              offset: const Offset(
-                                  0, 3), // changes position of shadow
+                    isLodaing
+                        ? Shimmer(
+                            duration: const Duration(seconds: 1),
+                            color: Colors.grey.shade300,
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 22),
+                              width: 110,
+                              height: 200,
+                              decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: const Color(0xff000000)
+                                          .withOpacity(0.25),
+                                      spreadRadius: 0.3,
+                                      blurRadius: 6,
+                                      offset: const Offset(
+                                          0, 3), // changes position of shadow
+                                    ),
+                                  ],
+                                  gradient: const LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [
+                                        Color(0xffE8E8E8),
+                                        Color(0xff828282)
+                                      ]),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(15))),
                             ),
-                          ],
-                          gradient: const LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [Color(0xffE8E8E8), Color(0xff828282)]),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(15))),
-                    ),
-                    Container(
-                      width: 110,
-                      height: 200,
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xff000000).withOpacity(0.25),
-                              spreadRadius: 0.3,
-                              blurRadius: 6,
-                              offset: const Offset(
-                                  0, 3), // changes position of shadow
+                          )
+                        : Container(
+                            margin: const EdgeInsets.only(right: 22),
+                            width: 110,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color:
+                                      const Color(0xff000000).withOpacity(0.25),
+                                  spreadRadius: 0.3,
+                                  blurRadius: 6,
+                                  offset: const Offset(
+                                      0, 3), // changes position of shadow
+                                ),
+                              ],
+                              color: const Color(0xffFFFCB0),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(15)),
                             ),
-                          ],
-                          gradient: const LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [Color(0xffE8E8E8), Color(0xff828282)]),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(15))),
-                    ),
+                            child: Column(
+                              children: [
+                                const Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 10, top: 15),
+                                      child: Text('Pizza'),
+                                    )),
+                                Row(
+                                  children: [
+                                    const SizedBox(
+                                      width: 33,
+                                    ),
+                                    Image.asset(
+                                      "assets/Rectangle_22_1_-removebg-preview.png",
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                    isLodaing
+                        ? Shimmer(
+                            duration: const Duration(seconds: 1),
+                            color: Colors.grey.shade300,
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 22),
+                              width: 110,
+                              height: 200,
+                              decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: const Color(0xff000000)
+                                          .withOpacity(0.25),
+                                      spreadRadius: 0.3,
+                                      blurRadius: 6,
+                                      offset: const Offset(
+                                          0, 3), // changes position of shadow
+                                    ),
+                                  ],
+                                  gradient: const LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [
+                                        Color(0xffE8E8E8),
+                                        Color(0xff828282)
+                                      ]),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(15))),
+                            ),
+                          )
+                        : Container(
+                            margin: const EdgeInsets.only(right: 22),
+                            width: 110,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color:
+                                      const Color(0xff000000).withOpacity(0.25),
+                                  spreadRadius: 0.3,
+                                  blurRadius: 6,
+                                  offset: const Offset(
+                                      0, 3), // changes position of shadow
+                                ),
+                              ],
+                              color: const Color(0xffBFFFD1),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(15)),
+                            ),
+                            child: Column(
+                              children: [
+                                const Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 10, top: 15),
+                                      child: Text('Pasta'),
+                                    )),
+                                Row(
+                                  children: [
+                                    const SizedBox(
+                                      width: 33,
+                                    ),
+                                    Image.asset(
+                                      "assets/Rectangle_22_2_-removebg-preview.png",
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                   ],
                 ),
                 const SizedBox(
@@ -165,7 +288,15 @@ class _SihmmerScreenState extends State<SihmmerScreen> {
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Text('See More...')],
+                  children: [
+                    Text(
+                      'See More...',
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    Divider(
+                      color: Colors.blue,
+                    )
+                  ],
                 ),
                 const SizedBox(
                   height: 16,
@@ -173,176 +304,198 @@ class _SihmmerScreenState extends State<SihmmerScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 2.png"),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 3.png"),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 4.png"),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 5.png"),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 6,
-                            color: Colors.grey.withOpacity(0.5),
-                          ),
-                        ],
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffFFFFFF), Color(0xff999999)]),
-                        //boxShadow: kElevationToShadow[20]
-                      ),
-                    ),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 6.png"),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 7.png"),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 8.png"),
+                    isLodaing
+                        ? Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 6,
+                                  color: Colors.grey.withOpacity(0.5),
+                                ),
+                              ],
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFFFFFF),
+                                    Color(0xff999999)
+                                  ]),
+                              //boxShadow: kElevationToShadow[20]
+                            ),
+                          )
+                        : Image.asset("assets/Ellipse 9.png"),
                   ],
                 ),
               ],
