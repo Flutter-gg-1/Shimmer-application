@@ -10,7 +10,7 @@ A new Flutter project for create Food Offer screen with great UI and `Shimmer` p
 ### initState
 ![alt text](assest/readme/image-1.png) 
 
-### output
+## output
 ![alt text](assest/readme/image-2.png) 
 
 ![alt text](assest/readme/shimmerGif.gif) 
