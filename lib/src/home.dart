@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 10), () {
       setState(() {
         showShimmer = false;
       });
@@ -31,6 +31,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
+      drawer: Drawer(),
       bottomNavigationBar: NavigationBar(
         height: 95,
         destinations: const [
@@ -55,7 +56,13 @@ class _HomeState extends State<Home> {
             top: 170,
             left: 41,
             right: 211,
-            child: Text('data'),
+            child: Text('Delicious Food?'),
+          ),
+          const Positioned(
+            top: 190,
+            left: 41,
+            right: 211,
+            child: Text('Go Ahead ...'),
           ),
           Positioned(
             top: 280,
@@ -89,6 +96,22 @@ class _HomeState extends State<Home> {
                     child: buildGradientContainer(),
                   )
                 : buildImageContainers(image: 'assets/Rectangle 24.png'),
+          ),
+          const Positioned(
+            top: 440,
+            left: 185,
+            child: Text(
+              'See more...',
+              style: TextStyle(color: Colors.blue),
+            ),
+          ),
+          const Positioned(
+            top: 450,
+            left: 180,
+            child: Text(
+              '___________',
+              style: TextStyle(color: Colors.blue),
+            ),
           ),
           Positioned(
             top: 467,
