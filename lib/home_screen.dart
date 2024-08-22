@@ -58,52 +58,57 @@ class HomeScreen extends StatelessWidget {
                 painter: BackgroundShape(),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 50),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Positioned(
-                    left: 45,
-                    top: 300,
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 138,
-                          width: 77,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.yellow,
-                          ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Positioned(
+                  left: 45,
+                  top: 300,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 138,
+                        width: 77,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.yellow,
                         ),
-                        const SizedBox(width: 30),
-                        Container(
-                          height: 138,
-                          width: 77,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.yellow,
-                          ),
+                      ),
+                      const SizedBox(width: 30),
+                      Container(
+                        height: 138,
+                        width: 77,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.yellow,
                         ),
-                        const SizedBox(width: 30),
-                        Container(
-                          height: 138,
-                          width: 77,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.yellow,
-                          ),
+                      ),
+                      const SizedBox(width: 30),
+                      Container(
+                        height: 138,
+                        width: 77,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.yellow,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 30),
-                  const CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Colors.yellow,
+                ),
+                const SizedBox(height: 50),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  child: Row(
+                    children: [
+                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
+                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
+                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
+                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
+                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
