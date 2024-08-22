@@ -88,17 +88,24 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 50),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5),
-                  child: Row(
-                    children: [
-                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
-                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
-                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
-                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
-                      CircleAvatar(radius: 50, backgroundColor: Colors.yellow),
-                    ],
-                  ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                  ],
+                ),
+                const SizedBox(height: 50),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                    CircleAvatar(radius: 45, backgroundColor: Colors.yellow),
+                  ],
                 ),
               ],
             ),
