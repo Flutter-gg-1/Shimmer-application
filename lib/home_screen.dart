@@ -58,6 +58,15 @@ class HomeScreen extends StatelessWidget {
                 painter: BackgroundShape(),
               ),
             ),
+            Positioned(
+              left: 150,
+              top: 300,
+              child: Container(
+                color: Colors.yellow,
+                height: 138,
+                width: 77,
+              ),
+            ),
           ],
         ),
       ),
