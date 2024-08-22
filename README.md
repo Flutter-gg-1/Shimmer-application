@@ -1,16 +1,20 @@
 # shimmer_app
 
-A new Flutter project.
+A new Flutter project for create Food Offer screen with great UI and `Shimmer` package.
 
-## Getting Started
+## Main Functionalities
 
-This project is a starting point for a Flutter application.
+### Shimmer 
+![alt text](assest/readme/image.png) 
 
-A few resources to get you started if this is your first Flutter project:
+### initState
+![alt text](assest/readme/image-1.png) 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### output
+![alt text](assest/readme/image-2.png) 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](assest/readme/shimmerGif.gif) 
+
+Feel free to use with account name mentioned
+
+by `Basel-75` Github
