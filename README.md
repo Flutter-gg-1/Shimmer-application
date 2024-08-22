@@ -7,12 +7,12 @@ This assignment involves building food application, focusing on applying the `Sh
 #### 2. Widgets Used 🎨
 Two types of widgets were used in this assignment :
 
-##### 2.1 Built-in widgets
+##### 2.1 Built-in/installed widgets
 Including the following widgets :
 - **Stack** : Stack was used to overlap widgets such as the background shape and the content.
 - **Shimmer** : Shimmer was used to add loading effect in the app, it replaces the main content.
 
-###### 2.2 Custom widgets
+##### 2.2 Custom widgets
 I always aim to better code readability and maintainability, custom widgets ease that to me by isolating each repeated code or a special-styled widget in a separate file and call it to the widget tree whenever needed. I used the following custom widgets :
 
 - **MainFood** : this widget represents the three rectangles in the middle of the page.
