@@ -50,50 +50,42 @@ class HomeScreen extends StatelessWidget {
                   size: const Size(113, 30),
                   painter: RPSCustomPainter(),
                 )),
-            Positioned(
-              left: 0,
-              top: 0,
-              child: CustomPaint(
-                size: const Size(144, 800),
-                painter: BackgroundShape(),
-              ),
+            CustomPaint(
+              size: const Size(144, 800),
+              painter: BackgroundShape(),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Positioned(
-                  left: 45,
-                  top: 300,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 138,
-                        width: 77,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.yellow,
-                        ),
+                Row(
+                  children: [
+                    Container(
+                      height: 138,
+                      width: 77,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.yellow,
                       ),
-                      const SizedBox(width: 30),
-                      Container(
-                        height: 138,
-                        width: 77,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.yellow,
-                        ),
+                    ),
+                    const SizedBox(width: 30),
+                    Container(
+                      height: 138,
+                      width: 77,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.yellow,
                       ),
-                      const SizedBox(width: 30),
-                      Container(
-                        height: 138,
-                        width: 77,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.yellow,
-                        ),
+                    ),
+                    const SizedBox(width: 30),
+                    Container(
+                      height: 138,
+                      width: 77,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.yellow,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 50),
                 const Padding(
