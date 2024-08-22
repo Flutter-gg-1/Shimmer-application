@@ -37,10 +37,6 @@ For common issues or troubleshooting:
 - Review the code and verify that data structures match expected formats.
 For additional help, consult the Flutter documentation or open an issue on the project's GitHub repository.
 
-### App Demo
-https://github.com/user-attachments/assets/971b9fd1-c434-4944-840e-43d49a999052
-
-
 
 ## Authors
 - imahacs - [GitHub Profile](https://github.com/imahacs)
