@@ -21,5 +21,8 @@ The project is structured as follows:
 
 ## GIF
 
-![ScreenRecording1446-02-18at7 48 38AM-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3d9f337f-6a6f-4d05-9594-fa4173475a4b)
+
+
+![ScreenRecording1446-02-18at8 00 57AM-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9648ed22-5d28-4328-971d-54e6e8942a5d)
+
 
