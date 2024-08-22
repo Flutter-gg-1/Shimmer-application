@@ -3,8 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 import 'all_file.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 5), () {
+      setState(() {
+        isLoading = false;
+      });
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,38 +86,71 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 50),
-                    child: Shimmer(
-                      child: Row(
-                        children: [
-                          Container(
-                            height: 138,
-                            width: 77,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.yellow,
+                    child: isLoading
+                        ? Shimmer(
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 138,
+                                  width: 77,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                                const SizedBox(width: 30),
+                                Container(
+                                  height: 138,
+                                  width: 77,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                                const SizedBox(width: 30),
+                                Container(
+                                  height: 138,
+                                  width: 77,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        : Shimmer(
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 138,
+                                  width: 77,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                                const SizedBox(width: 30),
+                                Container(
+                                  height: 138,
+                                  width: 77,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                                const SizedBox(width: 30),
+                                Container(
+                                  height: 138,
+                                  width: 77,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          const SizedBox(width: 30),
-                          Container(
-                            height: 138,
-                            width: 77,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.yellow,
-                            ),
-                          ),
-                          const SizedBox(width: 30),
-                          Container(
-                            height: 138,
-                            width: 77,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.yellow,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                   ),
                   const SizedBox(height: 50),
                   Shimmer(
