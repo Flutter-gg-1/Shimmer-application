@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shimmer_animation: ^2.2.1
 
 dev_dependencies:
   flutter_test:
